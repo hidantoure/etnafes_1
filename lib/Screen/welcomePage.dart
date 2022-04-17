@@ -14,22 +14,22 @@ class _WelcomePageState extends State<WelcomePage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context, MaterialPageRoute(builder: (context) => LoginPage()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.symmetric(vertical: 13),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Color(0xff44B33E).withAlpha(100),
-                offset: Offset(2, 4),
-                blurRadius: 8,
-                spreadRadius: 2)
-          ],
-            color:Colors.grey),
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Color(0xff44B33E).withAlpha(100),
+                  offset: Offset(2, 4),
+                  blurRadius: 8,
+                  spreadRadius: 2)
+            ],
+            color: Colors.grey),
         child: Text(
           'login',
           style: TextStyle(fontSize: 25, color: Colors.black),
@@ -57,7 +57,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   blurRadius: 8,
                   spreadRadius: 2)
             ],
-            color:Colors.grey),
+            color: Colors.grey),
         child: Text(
           'Register now',
           style: TextStyle(fontSize: 25, color: Colors.black),
@@ -68,16 +68,13 @@ class _WelcomePageState extends State<WelcomePage> {
 
   Widget _image() {
     return Image(
-            image: AssetImage('assets/image/logo-etnafes-couleur.png'),
-             height: 250,
-             width: 400,
-             fit: BoxFit.cover,
-
+      image: AssetImage(
+          'assets/image/food1.png'), //! the image you wanted here wasn't in assets/images folder, so i picked one that was here
+      height: 250,
+      width: 400,
+      fit: BoxFit.cover,
     );
   }
-
-
-
 
   // Widget _title() {
   //   return RichText(
@@ -106,8 +103,8 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:SingleChildScrollView(
-        child:Container(
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
@@ -120,8 +117,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     spreadRadius: 2)
               ],
               gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
+                  begin: Alignment.topCenter, end: Alignment.bottomCenter,
                   // colors: [Color(0xfffbb448), Color(0xffe46b10)])),
                   colors: [Color(0xffFDFEFE), Color(0xff7B7D7D)])),
           child: Column(
@@ -145,7 +141,6 @@ class _WelcomePageState extends State<WelcomePage> {
               SizedBox(
                 height: 20,
               ),
-
             ],
           ),
         ),
